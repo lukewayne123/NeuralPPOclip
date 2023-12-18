@@ -1,0 +1,74 @@
+mini-space_invaders-v4:
+  frame_stack: 4
+  policy: 'MlpPolicy'
+  n_envs: 4
+  n_steps: 128
+  n_epochs: 5
+  batch_size: 256
+  n_timesteps: !!float 5e6
+  learning_rate: lin_1e-3
+  clip_range: lin_0.1
+  alpha: 0.5
+  vf_coef: 0.00075
+  ent_coef: 0.0
+  EMDAstep: 0.005 
+  max_grad_norm: 10.0 
+  K: 5
+  #K: 2 # for root
+  policy_kwargs: "dict(activation_fn=nn.ReLU, ortho_init=True, features_extractor_class=MiniQNetwork)"
+  TemperatureLambda: 10
+
+mini-breakout-v4:
+  frame_stack: 4
+  policy: 'CnnPolicy'
+  n_envs: 8
+  n_steps: 128 
+  n_epochs: 10
+  batch_size: 256
+  n_timesteps: !!float 5e6 
+  learning_rate: lin_1e-3
+  clip_range: lin_0.1
+  ent_coef: 0.0
+  policy_kwargs: "dict(activation_fn=nn.ReLU, ortho_init=True, features_extractor_class=MiniQNetwork)"
+  max_grad_norm: 10.0 
+  K: 2
+  EMDAstep: 0.005 
+  alpha: 0.3 
+  vf_coef: 0.00075 
+  TemperatureLambda: 25
+
+CartPole-v1:
+  n_envs: 1
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 256
+  batch_size: 64 
+  n_epochs: 5
+  ent_coef: 0.0
+  learning_rate: lin_0.00075 
+  clip_range: lin_0.2
+  max_grad_norm: 0.1 
+  EMDAstep: 0.001 
+  K: 5
+  alpha: 0.3
+  vf_coef: 0.5 
+  TemperatureLambda: 10
+
+
+LunarLander-v2:
+  n_envs: 16
+  n_timesteps: !!float 1e6
+  policy: 'MlpPolicy'
+  n_steps: 256
+  batch_size: 64
+  n_epochs: 10
+  max_grad_norm: 10.0 
+  learning_rate: lin_5e-4
+  vf_coef: 0.75 
+  EMDAstep: 0.01
+  #EMDAstep: 0.002 # for Clip-sub
+  K: 5
+  alpha: 0.5
+  #alpha: 0.5 # for Clip-sub
+  TemperatureLambda: 10
+

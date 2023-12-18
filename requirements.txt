@@ -1,0 +1,22 @@
+#git+https://github.com/DLR-RM/stable-baselines3#egg=stable-baselines3[extra,tests,docs]
+stable-baselines3==1.1.0a7
+#box2d-py==2.3.8
+pybullet
+gym-minigrid
+scikit-optimize
+optuna
+pytablewriter
+seaborn
+pyyaml>=5.1
+sb3-contrib>=1.1.0a7
+cloudpickle>=1.5.0
+Box2D
+box2d-py
+gym[Box_2D]
+swig
+tensorboard
+# tmp fix: ROM missing in newest release
+#atari-py==0.2.6
+# apt install -y libsm6 libxext6
+# apt install -y libgl1-mesa-glx libglib2.0-0
+# apt install -y gcc g++

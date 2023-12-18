@@ -14,7 +14,7 @@
 
 `pip install --upgrade pip`
 
-`pip install -r requirement.txt`
+`pip install -r requirements.txt`
 
 
 ***Training command:***

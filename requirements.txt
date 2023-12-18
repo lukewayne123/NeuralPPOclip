@@ -2,7 +2,7 @@
 stable-baselines3==1.1.0a7
 #box2d-py==2.3.8
 pybullet
-gym-minigrid
+minigrid
 scikit-optimize
 optuna
 pytablewriter

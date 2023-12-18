@@ -12,6 +12,7 @@ sb3-contrib>=1.1.0a7
 cloudpickle>=1.5.0
 Box2D
 box2d-py
+gym==0.25.0
 gym[Box_2D]
 swig
 tensorboard

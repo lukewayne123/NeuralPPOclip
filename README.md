@@ -1,4 +1,5 @@
-*** Install process:
+***Install process:***
+
 - System: Using docker image pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime
 
 `docker(or podman) run -it pytorch/pytorch:1.7.1-cuda11.0-cudnn8-runtime`
@@ -16,7 +17,7 @@
 `pip install -r requirement.txt`
 
 
-*** Training command:
+***Training command:***
 
 ```
 python train.py --algo {ALOGS} --classifier {CLASSIFIER} --env {GAMES} --seed {SEEDS} --tensorboard-log $PWD/tensorboards
@@ -34,7 +35,7 @@ python train.py --algo {ALOGS} --classifier {CLASSIFIER} --env {GAMES} --seed {S
 
 `ALGO = {neuralppo, ppo, a2c}`
 
-*** Training log:
+***Training log:***
 Record for experiments.
 
 
